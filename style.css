@@ -50,14 +50,12 @@ body, html {
 }
 
 #topBtn {
-    position: absolute; /* スクロールに合わせて移動しない */
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 99;
     border: none;
     outline: none;
-    background-color: rgba(255, 204, 203, 0.8); /* 透明度を追加 */
     color: white;
     cursor: pointer;
     padding: 10px 20px;
