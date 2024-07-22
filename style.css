@@ -12,10 +12,6 @@ body, html {
     background-position: center;
     height: 100vh;
     color: white;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .hero-text {
