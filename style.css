@@ -24,7 +24,7 @@ body, html {
     padding: 20px;
 }
 
-#topBtn {
+#entryBtn {
     display: none; /* 最初は非表示 */
     position: fixed;
     bottom: 20px;
@@ -44,18 +44,46 @@ body, html {
     opacity: 0; /* 初期状態は透明 */
 }
 
+#entryBtn:hover {
+    background-color: rgba(255, 153, 153, 0.8); /* 透明度を追加 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#topBtn {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 204, 203, 0.8); /* 透明度を追加 */
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #topBtn:hover {
     background-color: rgba(255, 153, 153, 0.8); /* 透明度を追加 */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-#topBtn::before {
-    content: "TOP ";
+#entryBtn::before {
+    content: "ENTRY ";
     color: white;
 }
 
-#topBtn::after {
-    content: "▲";
+#entryBtn::after {
+    content: "▶";
     color: white;
     font-size: 12px;
     margin-left: 5px;
