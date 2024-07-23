@@ -90,3 +90,22 @@ body, html {
     max-width: 100%;
     height: auto;
 }
+
+.p-index_service__slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.keen-slider__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px; /* 必要に応じて調整 */
+}
+
+.keen-slider__slide img {
+    max-width: 100%;
+    height: auto;
+}
