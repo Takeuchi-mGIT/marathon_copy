@@ -28,28 +28,3 @@ function entryFunction() {
 function topFunction() {
     $('html, body').animate({ scrollTop: 0 }, 'slow');
 }
-
-
-// Keen Sliderの初期化
-document.addEventListener('DOMContentLoaded', function () {
-    new KeenSlider("#js-index-service-slider1", {
-        loop: true,
-        duration: 5000,
-        spacing: 15,
-        slidesPerView: 1,
-        breakpoints: {
-            '(min-width: 768px)': {
-                slidesPerView: 3,
-                spacing: 30
-            },
-            '(min-width: 1024px)': {
-                slidesPerView: 4,
-                spacing: 40
-            }
-        },
-        animation: {
-            duration: 5000,
-            easing: (t) => t
-        }
-    });
-});
