@@ -75,12 +75,10 @@ body, html {
 }
 
 #entryBtn::before {
-    content: "ENTRY ";
     color: white;
 }
 
 #entryBtn::after {
-    content: "▶";
     color: white;
     font-size: 12px;
     margin-left: 5px;
