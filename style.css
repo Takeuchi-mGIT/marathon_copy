@@ -119,3 +119,36 @@ header .btn {
     max-height: 60vh; /* 最大高さをビューポートの60%に制限 */
     object-fit: cover; /* 画像のアスペクト比を保ちながらサイズを調整 */
 }
+
+.carousel-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carousel-left, .carousel-right {
+    flex: 1;
+}
+
+.carousel-left img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-right {
+    flex: 2; /* 右側のカロセルが左側の2倍の幅になる */
+}
+
+.carousel-right .carousel-inner img {
+    width: 100%;
+    height: auto;
+    max-height: 60vh; /* 最大高さをビューポートの60%に制限 */
+}
+
+.carousel-right .carousel-item {
+    /* スライドショーの設定 */
+}
+
+.carousel-control-prev, .carousel-control-next {
+    /* スライドショーのコントロールボタンのスタイリング */
+}
