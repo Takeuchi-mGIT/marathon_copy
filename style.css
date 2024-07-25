@@ -96,14 +96,38 @@ header .btn {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-#entryBtn::before {
-    color: white;
+#entryBtn {
+    background: linear-gradient(45deg, #ff4d4d, #ff6f6f, #ff4d4d); /* 炎の色 */
+    color: #fff; /* 文字色を白に */
+    border: none; /* ボーダーをなしに */
+    padding: 10px 20px; /* ボタンのパディング */
+    border-radius: 50px; /* 楕円形にする */
+    font-size: 16px; /* フォントサイズ */
+    font-weight: bold; /* フォントを太く */
+    text-transform: uppercase; /* 文字を大文字に */
+    cursor: pointer; /* ポインターカーソル */
+    position: relative; /* 炎のエフェクトを作るために必要 */
+    overflow: hidden; /* 子要素がはみ出さないように */
+    z-index: 1; /* 重ね順 */
 }
 
-#entryBtn::after {
-    color: white;
-    font-size: 12px;
-    margin-left: 5px;
+#entryBtn::before {
+    content: ""; /* コンテンツを空に */
+    position: absolute; /* 絶対位置 */
+    top: -50%; /* 上方向に移動 */
+    left: -50%; /* 左方向に移動 */
+    width: 200%; /* 幅を2倍に */
+    height: 200%; /* 高さを2倍に */
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.8), rgba(255, 165, 0, 0.8)); /* 炎のようなグラデーション */
+    border-radius: 50%; /* 丸くする */
+    animation: flame 1s infinite; /* 炎のアニメーション */
+    z-index: -1; /* 背景に配置 */
+}
+
+@keyframes flame {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 0.6; }
+    100% { transform: scale(1); opacity: 0.8; }
 }
 
 .text-center img {
