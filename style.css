@@ -184,7 +184,7 @@ header .btn {
 }
 
 /* h系のタイトル用のスタイル */
-h1, h2, h3 {
+h2, h3 {
     background-color: #6c757d; /* 背景色：グレー */
     color: #fff; /* 文字色：白 */
     padding: 10px; /* パディング */
@@ -193,7 +193,7 @@ h1, h2, h3 {
 }
 
 /* h系タイトルに続くセクション用のスタイル */
-h1 + p, h1 + ul, h2 + p, h2 + ul, h3 + p, h3 + ul {
+h2 + p, h2 + ul, h3 + p, h3 + ul {
     background-color: #f8f9fa; /* 背景色：薄いグレー */
     color: #212529; /* 文字色：黒 */
     padding: 10px; /* パディング */
@@ -202,7 +202,7 @@ h1 + p, h1 + ul, h2 + p, h2 + ul, h3 + p, h3 + ul {
 }
 
 /* h系タイトルの直後にある全ての要素を対象 */
-h1 + *:not(h2), h2 + *:not(h3), h3 + * {
+h2 + *:not(h3), h3 + * {
     background-color: #f8f9fa; /* 背景色：薄いグレー */
     color: #212529; /* 文字色：黒 */
     padding: 10px; /* パディング */
