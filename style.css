@@ -112,3 +112,8 @@ header .btn {
     max-width: 100%;
     height: auto;
 }
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
