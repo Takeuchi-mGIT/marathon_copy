@@ -122,33 +122,29 @@ header .btn {
 
 .carousel-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    height: 60vh; /* 高さを設定して、両方のカロセルエリアが同じ高さになるようにする */
 }
 
 .carousel-left, .carousel-right {
     flex: 1;
+    overflow: hidden; /* カロセルエリアの外に出た画像が表示されないようにする */
 }
 
-.carousel-left img {
+.carousel-left img, .carousel-right img {
     width: 100%;
-    height: auto;
+    height: 100%; /* 高さを100%に設定して、親要素の高さに合わせる */
+    object-fit: cover; /* アスペクト比を保ちながら画像を拡大・縮小 */
 }
 
-.carousel-right {
-    flex: 2; /* 右側のカロセルが左側の2倍の幅になる */
-}
-
-.carousel-right .carousel-inner img {
-    width: 100%;
-    height: auto;
-    max-height: 60vh; /* 最大高さをビューポートの60%に制限 */
+.carousel-right .carousel-inner {
+    height: 100%; /* 高さを100%に設定して、親要素の高さに合わせる */
 }
 
 .carousel-right .carousel-item {
-    /* スライドショーの設定 */
+    height: 100%; /* 高さを100%に設定して、親要素の高さに合わせる */
 }
 
-.carousel-control-prev, .carousel-control-next {
-    /* スライドショーのコントロールボタンのスタイリング */
+.carousel-right .carousel-item img {
+    height: 100%; /* 高さを100%に設定して、親要素の高さに合わせる */
 }
