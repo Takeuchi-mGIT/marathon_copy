@@ -10,7 +10,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(51, 51, 51, 0.8); /* 透明度を追加 */
+    background-color: rgba(255, 255, 255, 0.8); /* 白色に変更し、透明度を保持 */
     color: white;
     padding: 10px 20px;
     box-sizing: border-box;
@@ -23,8 +23,8 @@ header .logo {
 }
 
 header .btn {
-    color: white;
-    border-color: white;
+    color: black; /* 文字色を黒に変更 */
+    border-color: black; /* 枠線の色を黒に変更 */
 }
 
 .hero {

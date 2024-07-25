@@ -28,3 +28,13 @@ function entryFunction() {
 function topFunction() {
     $('html, body').animate({ scrollTop: 0 }, 'slow');
 }
+
+// スムーズスクロールの関数
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
