@@ -50,25 +50,42 @@ header .btn {
     display: none; /* 最初は非表示 */
     position: fixed;
     bottom: 20px;
-    right: 30px;
+    right: 20px; /* 左から20pxの位置に修正 */
     z-index: 99;
     border: none;
     outline: none;
-    background-color: rgba(255, 204, 203, 0.8); /* 透明度を追加 */
-    color: white;
+    background: linear-gradient(45deg, #ff4d4d, #ff6f6f, #ff4d4d);
+    color: #fff;
     cursor: pointer;
     padding: 10px 20px;
-    border-radius: 50%;
+    border-radius: 50px;
     font-size: 16px;
     font-weight: bold;
+    text-transform: uppercase;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, box-shadow 0.3s, opacity 0.5s; /* アニメーションを追加 */
-    opacity: 0; /* 初期状態は透明 */
+    transition: background-color 0.3s, box-shadow 0.3s, opacity 0.5s;
+    opacity: 1;
+    overflow: hidden;
+    animation: flame 1s infinite;
 }
 
-#entryBtn:hover {
-    background-color: rgba(255, 153, 153, 0.8); /* 透明度を追加 */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+#entryBtn::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.8), rgba(255, 165, 0, 0.8));
+    border-radius: 50%;
+    animation: flame 1s infinite;
+    z-index: -1;
+}
+
+@keyframes flame {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 0.6; }
+    100% { transform: scale(1); opacity: 0.8; }
 }
 
 #topBtn {
@@ -92,42 +109,8 @@ header .btn {
 }
 
 #topBtn:hover {
-    background-color: rgba(255, 153, 153, 0.8); /* 透明度を追加 */
+    background-color: rgba(255, 153, 153, 0.8);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-#entryBtn {
-    background: linear-gradient(45deg, #ff4d4d, #ff6f6f, #ff4d4d); /* 炎の色 */
-    color: #fff; /* 文字色を白に */
-    border: none; /* ボーダーをなしに */
-    padding: 10px 20px; /* ボタンのパディング */
-    border-radius: 50px; /* 楕円形にする */
-    font-size: 16px; /* フォントサイズ */
-    font-weight: bold; /* フォントを太く */
-    text-transform: uppercase; /* 文字を大文字に */
-    cursor: pointer; /* ポインターカーソル */
-    position: relative; /* 炎のエフェクトを作るために必要 */
-    overflow: hidden; /* 子要素がはみ出さないように */
-    z-index: 1; /* 重ね順 */
-}
-
-#entryBtn::before {
-    content: ""; /* コンテンツを空に */
-    position: absolute; /* 絶対位置 */
-    top: -50%; /* 上方向に移動 */
-    left: -50%; /* 左方向に移動 */
-    width: 200%; /* 幅を2倍に */
-    height: 200%; /* 高さを2倍に */
-    background: radial-gradient(circle, rgba(255, 0, 0, 0.8), rgba(255, 165, 0, 0.8)); /* 炎のようなグラデーション */
-    border-radius: 50%; /* 丸くする */
-    animation: flame 1s infinite; /* 炎のアニメーション */
-    z-index: -1; /* 背景に配置 */
-}
-
-@keyframes flame {
-    0% { transform: scale(1); opacity: 0.8; }
-    50% { transform: scale(1.1); opacity: 0.6; }
-    100% { transform: scale(1); opacity: 0.8; }
 }
 
 .text-center img {
@@ -139,38 +122,38 @@ header .btn {
 
 .carousel-inner img {
     width: 100%;
-    height: auto; /* 高さは自動で調整 */
-    max-height: 60vh; /* 最大高さをビューポートの60%に制限 */
-    object-fit: cover; /* 画像のアスペクト比を保ちながらサイズを調整 */
+    height: auto;
+    max-height: 60vh;
+    object-fit: cover;
 }
 
 .carousel-container {
     display: flex;
     width: 100%;
-    height: 60vh; /* 高さを設定して、両方のカロセルエリアが同じ高さになるようにする */
+    height: 60vh;
 }
 
 .carousel-left, .carousel-right {
     flex: 1;
-    overflow: hidden; /* カロセルエリアの外に出た画像が表示されないようにする */
+    overflow: hidden;
 }
 
 .carousel-left img, .carousel-right img {
     width: 100%;
-    height: 100%; /* 高さを100%に設定して、親要素の高さに合わせる */
-    object-fit: cover; /* アスペクト比を保ちながら画像を拡大・縮小 */
+    height: 100%;
+    object-fit: cover;
 }
 
 .carousel-right .carousel-inner {
-    height: 100%; /* 高さを100%に設定して、親要素の高さに合わせる */
+    height: 100%;
 }
 
 .carousel-right .carousel-item {
-    height: 100%; /* 高さを100%に設定して、親要素の高さに合わせる */
+    height: 100%;
 }
 
 .carousel-right .carousel-item img {
-    height: 100%; /* 高さを100%に設定して、親要素の高さに合わせる */
+    height: 100%;
 }
 
 /* インジケーターを非表示にする */
@@ -180,32 +163,32 @@ header .btn {
 
 /* 矢印のスタイル設定 */
 .carousel-control-prev, .carousel-control-next {
-    color: black; /* 矢印の色を設定 */
+    color: black;
 }
 
 /* h系のタイトル用のスタイル */
 h2, h3 {
-    background-color: #6c757d; /* 背景色：グレー */
-    color: #fff; /* 文字色：白 */
-    padding: 10px; /* パディング */
-    border-radius: 5px; /* 角の丸み */
-    margin-top: 20px; /* 上のマージン */
+    background-color: #6c757d;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
 }
 
 /* h系タイトルに続くセクション用のスタイル */
 h2 + p, h2 + ul, h3 + p, h3 + ul {
-    background-color: #f8f9fa; /* 背景色：薄いグレー */
-    color: #212529; /* 文字色：黒 */
-    padding: 10px; /* パディング */
-    border-radius: 5px; /* 角の丸み */
-    margin-bottom: 20px; /* 下のマージン */
+    background-color: #f8f9fa;
+    color: #212529;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 /* h系タイトルの直後にある全ての要素を対象 */
 h2 + *:not(h3), h3 + * {
-    background-color: #f8f9fa; /* 背景色：薄いグレー */
-    color: #212529; /* 文字色：黒 */
-    padding: 10px; /* パディング */
-    border-radius: 5px; /* 角の丸み */
-    margin-bottom: 20px; /* 下のマージン */
+    background-color: #f8f9fa;
+    color: #212529;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
