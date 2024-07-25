@@ -38,3 +38,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Bootstrapのデフォルトのスライドタイミングを変更
+$('.carousel').carousel({
+    interval: 4000 // スライドの間隔を4秒に設定（ミリ秒単位）
+});

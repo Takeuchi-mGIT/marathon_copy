@@ -149,7 +149,12 @@ header .btn {
     height: 100%; /* 高さを100%に設定して、親要素の高さに合わせる */
 }
 
-/* インジケーターと矢印を非表示にする */
-.carousel-control-prev, .carousel-control-next, .carousel-indicators {
+/* インジケーターを非表示にする */
+.carousel-indicators {
     display: none;
+}
+
+/* 矢印のスタイル設定 */
+.carousel-control-prev, .carousel-control-next {
+    color: black; /* 矢印の色を設定 */
 }
