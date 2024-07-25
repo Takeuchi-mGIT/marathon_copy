@@ -115,5 +115,7 @@ header .btn {
 
 .carousel-inner img {
     width: 100%;
-    height: auto;
+    height: auto; /* 高さは自動で調整 */
+    max-height: 60vh; /* 最大高さをビューポートの60%に制限 */
+    object-fit: cover; /* 画像のアスペクト比を保ちながらサイズを調整 */
 }
