@@ -5,6 +5,20 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
+header {
+    background-color: #333;
+    color: white;
+}
+
+header .logo {
+    height: 50px;
+}
+
+header .btn {
+    color: white;
+    border-color: white;
+}
+
 .hero {
     position: relative;
     background-image: url('img/run.jpg');
