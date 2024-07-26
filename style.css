@@ -102,9 +102,9 @@ header .btn {
     bottom: 10px;
     left: 50%;
     /* transform: translateX(-50%); */
-    /* border: none; */
+    border: 2px solid black; /* ボーダーラインの色を黒に設定 */
     outline: none;
-    /* color: white; */
+    color: black;
     cursor: pointer;
     padding: 10px 20px;
     border-radius: 50px;
