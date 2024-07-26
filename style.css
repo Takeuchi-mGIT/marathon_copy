@@ -37,6 +37,9 @@ header .btn {
 }
 
 .hero-text {
+    font-family: "Yusei Magic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     /* background-color: rgba(0, 0, 0, 0.5); */
     padding: 20px;
     border-radius: 10px;
