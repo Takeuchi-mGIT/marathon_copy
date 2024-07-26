@@ -177,7 +177,7 @@ header .btn {
 }
 
 /* h系のタイトル用のスタイル */
-h2, h3 {
+.h_title {
     background-color: #6c757d;
     color: #fff;
     padding: 10px;
@@ -186,7 +186,7 @@ h2, h3 {
 }
 
 /* h系タイトルに続くセクション用のスタイル */
-h2 + p, h2 + ul, h3 + p, h3 + ul {
+.h_title + p, .h_title + ul {
     background-color: #f8f9fa;
     color: #212529;
     padding: 10px;
@@ -195,7 +195,7 @@ h2 + p, h2 + ul, h3 + p, h3 + ul {
 }
 
 /* h系タイトルの直後にある全ての要素を対象 */
-h2 + *:not(h3), h3 + * {
+.h_title + * {
     background-color: #f8f9fa;
     color: #212529;
     padding: 10px;
