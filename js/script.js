@@ -31,3 +31,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 $('.carousel').carousel({
     interval: 4000 // スライドの間隔を4秒に設定（ミリ秒単位）
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        document.getElementById('preloader').style.display = 'none';
+    }, 5000); // アニメーション時間+アニメーション遅延（3秒 + 2秒 = 5秒）
+});
