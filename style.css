@@ -249,3 +249,8 @@ header .btn {
     border-style: solid;
     border-color: white transparent transparent transparent;
 }
+
+ul {
+    padding-left: 1.5rem; /* 左側の余白を設定して、リストマーカーがはみ出さないように */
+    margin: 0; /* 追加のマージンを削除 */
+}
