@@ -43,6 +43,9 @@ header .btn {
     /* background-color: rgba(0, 0, 0, 0.5); */
     padding: 20px;
     border-radius: 10px;
+}
+
+.hero-text-h1{
     font-size: 3.5rem;
 }
 
