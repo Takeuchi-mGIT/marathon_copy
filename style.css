@@ -270,7 +270,7 @@ ul {
     align-items: center;
     z-index: 9999;
     animation: fadeOut 3s forwards;
-    /* animation-delay: 3s; 3秒後にアニメーションを開始 */
+    animation-delay: 2.5s; /* 3秒後にアニメーションを開始 */
 }
 
 @keyframes fadeOut {
@@ -304,7 +304,6 @@ footer {
     text-align: center;
     padding: 10px 0;
     background-color: #f8f9fa;
-    margin-top: 20px;
 }
 
 footer small {
