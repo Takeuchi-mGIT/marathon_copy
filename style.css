@@ -70,6 +70,9 @@ header .btn {
     opacity: 1;
     overflow: hidden;
     animation: flame 1s infinite;
+    font-family: "Yusei Magic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #entryBtn::before {
