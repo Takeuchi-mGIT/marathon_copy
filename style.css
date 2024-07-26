@@ -123,6 +123,13 @@ header .btn {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+.text-center {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
 .text-center img {
     display: block;
     margin: 0 auto;
