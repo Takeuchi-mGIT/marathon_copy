@@ -10,7 +10,7 @@ function scrollFunction() {
 }
 
 function entryFunction() {
-    window.location.href = 'https://forms.gle/hbs6B3RTNBuG8qZE9'; // エントリーページに遷移
+    window.location.href = ''; // エントリーページに遷移
 }
 
 function topFunction() {
