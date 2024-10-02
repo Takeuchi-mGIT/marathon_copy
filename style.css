@@ -32,7 +32,7 @@ header .btn {
 
 .hero {
     position: relative;
-    background-image: url('img/run.jpg');
+    background-image: url('img/run.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
